@@ -1,0 +1,8 @@
+LECTURE 97: USING 'shouldComponentUpdate' FOR OPTIMIZATION
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Any changes made to 'App.js', cause 'Persons.js', its child component, to rerender, even if there are no actual changes to 'Persons.js'
+
+-> Added if - else statements to 'Persons.js' shouldComponentUpdate method
+    -> returns true if there are changes to Persons itself
+    -> otherwise, returns false

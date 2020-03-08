@@ -1,0 +1,21 @@
+LECTURE 108: SETTING STATE CORRECTLY
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> When setting state that depends on the previous state, it is not best practice to set it using an object
+-> Instead, a function should be used 
+    -> The 'prevState' and 'props' can be passed as parameters
+    -> Inside the function body, the object with the changes to state should then be passed
+    -> NOTE: Do NOT use 'this.state', but 'prevState' to make sure the actual latest state is used
+
+
+-> To illustrate this, a new property is added to the state inside the 'App.js' file: changeCounter, which is set to 0 
+    -> Then inside the 'nameChangedHandler', the previously used object returning the new persons is commented out
+    -> That is then replaced by the new arrow function syntax
+
+
+
+
+
+
+
+

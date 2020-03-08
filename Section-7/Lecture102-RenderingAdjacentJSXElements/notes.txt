@@ -1,0 +1,23 @@
+LECTURE 102: RENDERING ADJACENT JSX ELEMENTS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Inside a return, there can only be 1 root element (e.g. a div), it cannot have any sibling elements
+
+-> React CAN however return an array of adjacent elements, as long as they have a key    
+    -> the key is used by React to properly update and rearrange elements
+
+-> To circumvent this issue, the root element can be replaced by [], effectively creating an array of elements
+    -> each element in the array should be seperated by a comma
+    -> to illustrate this, the <div> inside 'Person.js' was commented out and the elements were turned into an array of elements
+        -> the toggle will still show the persons list (without styling), but the console gives an error concerning keys
+
+-> There is also another way of achieving the same goal
+    -> to illustrate, a new folder was created inside the 'src' folder: hoc (higher order component)
+    -> inside the folder, a new file called 'aux.js' is created
+        -> React is imported (in this case, since it does not return JSX, this does not even have to be included)
+        -> a functional component (aux) is created that only returns 'props.children'
+	-> the component is exported and imported into 'Person.js' file
+	-> this allows for rendering adjacent JSX wrapped in a component, NOT an HTML/JSX element
+
+-> Either way of rendering adjacent JSX elements works, but it still has one disadvantage: it cannot render styling with the component
+

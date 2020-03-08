@@ -1,0 +1,6 @@
+LECTURE 103: USING REACT.FRAGMENT
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> In React 16.0.0 and higher, <Aux> is a built in component known as <React.Fragment>   
+    -> <Fragment> can also be used if fragment is imported with React
+

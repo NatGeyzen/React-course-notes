@@ -1,0 +1,23 @@
+LECTURE 111: REFS WITH REACT HOOKS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> There is a way to use refs inside functional components: using hooks
+    -> Inside the React import, 'useRef' must also be imported 
+    -> Inside the functional component:
+        -> Store a new reference, using 'useRef()' in a global variable
+        -> Place a ref attribute inside the correct component and assign the global variable as its value
+        -> Apply the method to the global variable inside the 'useEffect' function, so that it will only execute after the page is rendered
+
+-> An example can be found in the 'Cockpit.js' file
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+LECTURE 94: CONTROLLING THE 'useEffect()' BEHAVIOR
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> useEffect executes the first render and every time a re-render is triggered
+
+-> to only execute on a certain condition, a second argument can be added within the useEffect()
+    -> in Cockpit.js, [props.persons] is inserted as this argument so the code will only execute if persons change
+        -> it still executes initially, and when persons are changed, but not when they are toggled
+    -> the array content is deleted, so an empty array is remaining
+        -> this will cause the code to only execute the initial render
+
+-> useEffect can be used more than once 

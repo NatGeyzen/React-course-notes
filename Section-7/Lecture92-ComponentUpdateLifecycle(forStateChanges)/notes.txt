@@ -1,0 +1,7 @@
+LECTURE 92: COMPONENT UPDATE LIFECYCLE (FOR STATE CHANGES)
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> App.js:
+    -> 'componentDidUpdate()' added, with console.log
+    -> 'shouldComponentUpdate(nextProps, nextState)' added, with console.log
+        -> receives an error in the console, since it must return a boolean value that determines if it should update

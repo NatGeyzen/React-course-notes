@@ -1,0 +1,19 @@
+LECTURE 85: A BETTER PROJECT STRUCTURE
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Deleted 'ErrorBoundary' folder from the first practice project's 'src' folder
+
+-> Created new folder inside the 'src' folder: Persons
+    -> Moved the 'Person' folder into the newly created 'Persons' folder
+    -> Created a new file inside the 'Persons' folder: Persons.js
+
+-> Created a new folder inside the project's 'src' folder: components
+    -> Moved the 'Persons' folder, containing the 'Person' folder and 'Persons.js' file inside the newly created 'components' folder
+
+-> Created a new folder, still inside the 'src' folder: assets (currently empty but meant for images and such)
+
+-> Created a new folder, again inside the 'src' folder: containers
+    -> Moved the following files into the 'containers' folder: App.js, App.test.js, App.module.css
+
+-> Created a new folder inside the 'components' folder: Cockpit
+   -> Created a new file inside the 'Cockpit' folder: Cockpit.js

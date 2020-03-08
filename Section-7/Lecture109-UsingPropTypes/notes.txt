@@ -1,0 +1,20 @@
+LECTURE 109: USING PROPTYPES
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> There is a way to be more clear about which props are used an give errors when incorrect props are passed: prop-types
+    -> This is a 3rd package library that can be installed via npm
+
+-> Imported into 'Person.js' file
+    -> After the class-based or functional component (works for both), but before the export, access the component:
+        -> syntax: `Component.propTypes = {}`
+        -> inside the object, key-value pairs are assigned, with the key being the prop, and the value being the type
+
+-> If a prop is passed as a different type then assigned to the key, the console will give an error
+
+
+
+
+
+
+
+

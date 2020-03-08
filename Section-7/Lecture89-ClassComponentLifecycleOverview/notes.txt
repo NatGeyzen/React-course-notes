@@ -1,0 +1,18 @@
+LECTURE 89: CLASS COMPONENT LIFECYCLE OVERVIEW
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Only available in class-based components
+
+-> Component Lifecycle - Creation:
+    -> constructor(props)
+        -> default ES6 class feature
+        -> call super(props)
+        -> used to set up State, NOT to cause side-effects
+    -> getDerivedStateFromProps(props, state)
+        -> used to sync State, NOT to cause side-effects
+    -> render()
+        -> used to prepare & structure your JSX code
+    -> render child components
+    -> componentDidMount()
+        -> used to cause side-effects, NOT the update State (triggers re-render)
+

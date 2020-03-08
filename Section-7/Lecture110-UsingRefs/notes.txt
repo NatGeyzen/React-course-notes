@@ -1,0 +1,32 @@
+LECTURE 110: USING REFS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> React has a way to select a specific JSX element: the ref attribute
+    -> Inside the value, a function is passed, which can be an anonymous arrow function
+        -> Inside the argument, a reference to the element to be selected is placed 
+        -> Inside the function body, the selected element is then stored in a global variable
+    -> Within the 'componentDidMount' function body, a method is then applied to the global variable
+
+-> There is a second way of using refs, used in React 13.6 and up:
+    -> Create a constructor
+        -> Pass props as an argument to that constructor
+        -> Inside the constructor body, call the super component and again pass props to it
+        -> Create a reference using 'React.createRef()' and store it inside a global variable
+    -> Inside the component's ref attributem, pass the global variable (using the 'this'keyword) as the value
+    -> The preferred method can again be applied within 'componentDidMount', using 'this.variable.current.method' 
+
+-> Both methods can only be used inside class-bases components
+
+-> An example of both methods can be found inside the 'Person.js' file
+
+
+
+
+
+
+
+
+
+
+
+

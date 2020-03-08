@@ -1,0 +1,21 @@
+LECTURE 114: 'contextType' AND 'useContext()'
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> There is an alternative way of using contexts in class-based components:
+    -> Inside the 'Person.js' file, 'static contextType' is declared and given a value of 'AuthContext'
+    -> This gives code that previously could not access the context, access
+        -> for example, the context can now be logged in the console from inside the 'componentDidMount'
+
+
+
+
+
+
+
+
+
+
+
+
+
+

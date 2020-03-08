@@ -1,0 +1,47 @@
+LECTURE 91: COMPONENT UPDATE LIFECYCLE (FOR PROP CHANGES)
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> getDerivedStateFromProps(props, state)
+    -> rarely used in the update lifecycle
+    -> used to sync State to props
+    -> DON'T use to cause side effects
+
+-> shouldComponentUpdate(nextProps, nextState)
+    -> may cancel updating process
+    -> used to decide whether to continue or not
+    -> DON'T use to cause side effects
+
+-> render()
+    -> prepare and structure JSX code
+
+-> update child component props
+
+-> getSnapshotBeforeUpdate(prevProps, prevState)
+    -> used for last minute DOM operations
+    -> DON'T use to cause side effects
+
+-> componentDidUpdate()
+    -> used to cause side effects
+    -> DON'T update State (triggers re-render)
+
+----------
+
+-> Person.js: code converted to class-based component to use lifecycle hooks:
+    -> added ', {Component}' to React import
+    -> 'const person = (props) =>' replaced by 'class Person extends Component'
+    -> render() function added inside code block
+    -> console.log and return statement moved inside render code block
+    -> 'this' keyword added in front of any value containing 'props',  since only using props does not work in class-based components
+    -> export default renamed from 'person' to 'Person' to fit new class component 
+
+-> Persons.js:
+    -> applied the same changes as above to convert code to class-based component
+    -> added static getDerivedStateFromProps with console.log inside code block
+    -> added shouldComponentUpdate method, which should always return either true or false
+        -> console.log inside function body
+    -> added getSnapshotBeforeUpdate method, with another console.log
+    -> added componentDidUpdate method with final console.log
+    -> NOTE: getDerivedStateFromProps returns error inside console, so code is commented out, since it's not actually used
+    -> lifecycle hooks inside Persons.js only triggered when DOM changes are made (e.g. input change)
+    -> NOTE: getSnapshotBeforeUpdate returns an error since it must return a value or null, so 'return null' is added 
+       -> if a value is returned (not null), it can be used inside componentDidUpdate by adding it as a parameter

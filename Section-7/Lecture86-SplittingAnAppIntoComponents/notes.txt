@@ -1,0 +1,47 @@
+LECTURE 86: A BETTER PROJECT STRUCTURE
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Persons.js:
+    -> Created a new const, named 'persons' and assigned it an arrow function
+    -> 'props' is passed as a parameter inside the arrow function
+    -> If the function body only consist of a return statement, the {} and the return keyword can be ommited and replaced by just ()
+    -> Imported react at the top of the file
+    -> Copied the Person JSX code from 'App.js' file and pasted inside the return statement
+        -> Changed 'this.state.persons.map' to 'props.persons.map'
+    -> Imported Person from Person folder so 'Person' component can be returned
+    -> Replaced any 'this' keywords in the file with 'props' 
+    -> Replaced event handler names with 'clicked' and 'changed' instead of 'deletePersonHandler' and 'nameChangedHandler' respectively
+    -> Exported component as default persons
+
+-> App.js:
+    -> Changed import for 'Person' to 'Persons' with respective relative path
+    -> Deleted the JSX code that renders the list of persons if button is clicked (was copied into 'Persons.js' file)
+    -> Created a new Persons component inside the div (self-closing tag)
+    -> Gave the new component 3 attributes that were used as props inside 'Persons.js': persons, clicked, changed
+
+-> Cockpit.js
+    -> Copied h1 and p tags/text from inside 'App.js' return statement 
+    -> Created a new cockpit component using an arrow function (with {} code block this time)
+    -> Pasted the code from 'App.js' inside the function 
+    -> Imported react and exported component, as always
+    -> Wrapped copied code inside wrapper div
+    -> Cut 'assignedClasses' code from 'App.js' and pasted inside cockpit function body, above return
+    -> Like in 'Persons.js', any 'this' keywords are replaced by 'props'
+
+-> Created new file inside 'Cockpit' folder: Cockpit.module.css
+    -> Copied any codes except for '.App' rules from 'App.module.css' and pasted inside new file
+    -> added '.Cockpit' in front of any '.Button' classes containing '.Button'
+
+-> Cockpit.js
+    -> Imported the css style rules into 'Cockpit.js' file using 'import classes' syntax
+    -> Gave div wrapper className={classes.Cockpit}
+    -> Removed btnClass variable from 'App.js' and pasted inside file with empty string as value
+    -> Added if statement to check if persons are showing, with code to add 'Red' to classes inside body function
+    -> Replaced 'nameChangedHandler' with 'clicked'
+
+-> App.js
+    -> Added new 'Cockpit' component inside return statement (previously where h1 and p tags were)
+    -> Added 3 attributes to new component: showPersons, persons and clicked
+
+
+

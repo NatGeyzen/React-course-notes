@@ -1,0 +1,12 @@
+LECTURE 98: OPTIMIZING FUNCTIONAL COMPONENTS WITH 'React.memo()'
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Cockpit.js: 
+    -> wrapping the export component in 'React.memo()' creates a kind of snapshot of the component
+        -> the parent rerendering will not effect the child, unless the child itself was changed
+
+-> App.js:
+    -> changed Cockpit component's 'persons' attribute to 'personsLength={this.state.persons.length}'
+
+-> this insures that the Cockpit component is only rerendered when changes are made to it (when deleteing a Person element)
+    -> it will NO longer be rerendered when changes are made to Person itself (when typing input)

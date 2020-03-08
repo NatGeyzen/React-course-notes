@@ -1,0 +1,23 @@
+LECTURE 106: ANOTHER FORM OF HOC'S
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> A higher order component cannot only be created using a functional component, but also with a regular JS function
+    -> The first argument is the wrapped component
+    -> The second argument is code needed inside the function
+    -> NOTE: Since it is not a functional component, here props can NOT be used 
+    -> Inside the function body, a functional component is returned (here props CAN be used)
+    -> See WithClass.js for example (first form of HOC commented out for comparison reasons)
+
+
+-> The 'withClass' code should still be imported  into 'App.js', but with a lowercase now, since it is no longer a component
+    -> The 'WithClass' component that previously wrapped the returned JSX does not exist anymore, but is replaced with the 'Aux' component
+        -> Since that has not previously been used inside 'App.js', it needs to be imported
+    -> The 'withClass' function is instead used within the default export
+        -> 'export default withClass(App, classes.App)': the first agument is the wrapped component, the second the className  
+
+
+
+
+
+
+

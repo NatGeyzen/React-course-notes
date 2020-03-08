@@ -1,0 +1,19 @@
+LECTURE 105: HIGHER ORDER COMPONENTS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> So called because the simply wrap around another component, they do not have their own logic or styling
+
+-> Created new file 'withClass.js' inside the 'hoc' folder
+    -> Since JSX will be returned, react has to be imported
+    -> A functional component with the same name is created
+        -> Since the function body will only return JSX, not hold logic, it is surrounded by () instead of {}
+        -> Inside the function body, a div with 'className={props.classes} is implemented
+            -> The div will render '{props.children}'
+
+-> The 'WithClass' hoc is imported into 'App.js'
+    -> Inside the return, the original '<div className={classes.App}>' is replaced by the new WithClass component
+    -> the 'className' is replaced with 'classes', since the JSX inside 'withClass.js' expect an attribute with that name
+
+
+
+

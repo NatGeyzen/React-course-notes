@@ -1,0 +1,24 @@
+LECTURE 88: CLASS-BASED VS FUNCTIONAL COMPONENTS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> CLASS-BASED COMPONENTS
+    -> syntax: class XY extends Component
+    -> state:
+        -> have access to State
+        -> access State and Props via 'this' (this.state.XY, this.props.XY)
+    -> Lifecycle hooks are supported
+    -> use to manage State or access Lifecycle Hooks and don't want to use React Hooks
+
+
+-> FUNCTIONAL COMPONENTS
+    -> syntax: const XY = props => {...}
+    -> state:
+        -> have access to State with useState() hooks
+        -> access props via 'props' (props.XY)
+    -> Lifecycle hooks are NOT supported
+    -> use in all other cases
+
+-> CODE CHANGES:
+    -> index.js: added a 'appTitle' attribute to the App component
+    -> App.js: added 'title' attribute to Cockpit component and set it to 'this.props.appTitle'
+    -> Cockpit.js: replaced h1 text to '{props.title}'

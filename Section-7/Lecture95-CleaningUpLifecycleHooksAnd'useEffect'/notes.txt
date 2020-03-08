@@ -1,0 +1,23 @@
+LECTURE 95: CLEANING UP WITH LIFECYCLE HOOKS AND 'useEffect()' 
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> 'componentWillUnmount()' can be used for any clean up work, code that runs right before component is removed
+
+-> method and console log added to 'Persons.js' file
+    -> console log appears when toggling the persons to make them dissappear
+
+-> 'useEffect()' can also be used
+
+-> return state with console log added inside 'Cockpit.js' useEffect() method
+    -> NOTE: does not currently work since the cockpit is never actually removed
+    -> changes made to 'App.js' to show useEffect() clean up:
+        -> button added right above Cockpit component
+        -> new property 'showCockpit' added to state and set to true
+        -> onClick event added to new 'Remove cockpit button'
+        -> hardcoded anonymous fuction that sets 'showCockpit' to false
+        -> Cockpit component wrapped inside ternatory operator 
+
+-> useEffect() will only run cleanup work when component gets destroyed if an empty array is passed to it as a 2nd argument
+-> if there is no 2nd argument, it will perform cleanup work every re-render
+
+

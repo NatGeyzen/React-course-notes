@@ -1,0 +1,25 @@
+LECTURE 90: COMPONENT CREATION LIFECYCLE IN ACTION
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Changes to App.js:
+    -> Added constructor to the class component
+        -> passed props as a parameter
+        -> called 'super(props)' within function body
+        -> NOTE: state can be  initialized within the constructor with 'this.state'
+        -> '[App.js] constructor' is logged to console
+
+    -> underneath the state, getDerivedStateFromProps was added
+        -> this is a STATIC method!
+        -> '[App.js] getDerivedStateFromProps' and props is logged to console
+    
+    -> inside the render() function, '[App.js] render' is logged to the console
+
+    -> componentDidMount() was added and '[App.js] componentDidMount' is logged to the console
+
+-> Changes to Persons.js:
+    -> '[Persons.js] rendering ...' is logged to the console inside the person function
+    -> the () in the function body are replaced with {} since there is now more code than just the return statement
+    -> the return keyword is added in front of the return statement
+
+-> Changes to Person.js:
+    -> '[Person.js] rendering ...' is logged to the console inside the person function

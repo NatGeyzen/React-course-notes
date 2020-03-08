@@ -1,0 +1,10 @@
+LECTURE 93: USING 'useEffect()' IN FUNCTIONAL COMPONENTS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> Cockpit.js:
+    -> add '{useEffect}' to react import
+    -> 'useEffect()' hook added into the functional component's body
+        -> NOTE: not a lifecycle hook, but a react hook that gives access to lifecycle hook methods
+        -> arrow function inside of the hook's ()
+        -> NOTE: gives error inside the browser console (fixed by making component name capitalized)
+        -> NOTE: basically functions as 'componentDidMount' and 'componentDidUpdate' in one effect

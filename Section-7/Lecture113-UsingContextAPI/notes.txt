@@ -1,0 +1,35 @@
+LECTURE 113: USING CONTEXT API
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> New folder created inside the project's 'src' folder: context
+    -> New file created inside the newly added folder: auth-context.js
+        -> As always, React is imported
+        -> A new context is created with 'React.createContext()' and is stored in a variable
+            -> Inside the () a default value is passed, which allows data to travel between components, without using props
+
+
+-> Inside the 'App.js' file, the new context is imported and used: 
+    -> The new context is a component and should wrap any code that needs access to it
+        -> This is done using '<Component.Provider>' syntax (because the component provides the context)
+            -> Inside the component tags, a value is passed (if not, it will be the previously set default value)
+
+-> Inside the 'Person.js' file, the context is also used:
+    -> Again, the component is imported
+    -> The component is wrapped around the necessary code, this time using '<Component.Consumer' syntax (because the context is consumed)
+        -> The consumer does NOT take JSX as a child, but a function returning JSX
+            -> The context is passed to the function as a parameter
+            -> Any 'props' used inside the function body need to be replaced by the correctsponding 'context' properties
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+LECTURE 107: PASSING UNKNOWN PROPS
+-----------------------------------------------------------------------------------------------------------------------------
+
+-> In the 'Person.js' file, the Aux component is used, which has no styling (but there is styling for that component)
+    -> This issue can be resolved by importing the withClass function into the file
+    -> This applies the styling, but since Person is now passed as 'WrappedComponent', it loses its props
+        -> There are still props present on the Person component, but they must be passed to the WrappedComponent
+
+-> To pass them, the spread operator must be used on the withClass WrappedComponent, so they all props are passed as key value pairs
+ 
+
+
+
+
+
+
+
+
